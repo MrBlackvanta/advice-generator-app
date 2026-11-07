@@ -8,7 +8,7 @@ const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   weight: "800",
-  display: "swap",
+  display: "optional",
 });
 
 const title = `${SITE_NAME} | Random advice, one roll at a time`;
