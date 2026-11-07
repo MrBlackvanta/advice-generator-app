@@ -19,7 +19,7 @@ const shareImage = {
   url: "/opengraph-image.jpg",
   width: 1200,
   height: 630,
-  alt: "The name Maxim beside an advice card numbered 117, its quote, and the green dice button that rolls the next one.",
+  alt: "The name Maxim beside an advice card numbered 71, its quote, and the green dice button that rolls the next one.",
 };
 
 export const metadata: Metadata = {
