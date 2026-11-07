@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@source not "../../*.md";
+@source not "../../lint";
+@source not "../**/*.test.ts";
+@source not "../**/*.test.tsx";
+
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply overflow-y-scroll;
+  }
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
