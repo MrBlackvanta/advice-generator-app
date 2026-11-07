@@ -20,7 +20,7 @@ export default function AdviceCard({
       <div aria-live="polite" aria-busy={isRolling} className="v-card-text">
         {state.status === "ready" ? (
           <Fragment key={state.roll}>
-            <h1 className="v-card-heading">Advice #{state.advice.id}</h1>
+            <h1 className="v-card-heading">{`Advice #${state.advice.id}`}</h1>
             <blockquote
               cite={adviceSlipUrl(state.advice.id)}
               className="v-card-body"

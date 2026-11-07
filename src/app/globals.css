@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @source not "../../*.md";
 @source not "../../lint";
+@source not "../data/advice-catalogue.ts";
 @source not "../**/*.test.ts";
 @source not "../**/*.test.tsx";
 
