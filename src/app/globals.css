@@ -8,12 +8,54 @@
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
 
+@theme {
+  --color-*: initial;
+  --color-page: #202733;
+  --color-card: #313a48;
+  --color-divider: #4f5d74;
+  --color-ink: #cee3e9;
+  --color-accent: #53ffaa;
+
+  --tracking-quote: -0.01em;
+  --tracking-label: 0.3em;
+
+  --text-quote: 1.5rem;
+  --text-quote--line-height: 2.0625rem;
+  --text-quote--letter-spacing: var(--tracking-quote);
+
+  --text-quote-lg: 1.75rem;
+  --text-quote-lg--line-height: 2.375rem;
+  --text-quote-lg--letter-spacing: var(--tracking-quote);
+
+  --text-label: 0.6875rem;
+  --text-label--line-height: 0.9375rem;
+  --text-label--letter-spacing: var(--tracking-label);
+
+  --text-label-lg: 0.8125rem;
+  --text-label-lg--line-height: 1.125rem;
+  --text-label-lg--letter-spacing: var(--tracking-label);
+
+  --radius-card: 0.625rem;
+  --radius-card-lg: 0.9375rem;
+
+  --shadow-card: 30px 50px 80px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 40px var(--color-accent);
+}
+
 @layer base {
   html {
     @apply overflow-y-scroll;
   }
 
+  body {
+    @apply bg-page font-extrabold text-ink;
+  }
+
   button:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ink;
   }
 }
