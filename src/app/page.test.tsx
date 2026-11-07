@@ -59,6 +59,18 @@ describe("Home", () => {
     expect(window.__prepaintedAdvice).toEqual(slip);
   });
 
+  it("holds the first render until the pick script has run, however the HTML is chunked", () => {
+    prerender();
+
+    const renderGate = document.querySelector('link[rel="expect"]');
+
+    expect(renderGate).toHaveAttribute("blocking", "render");
+    expect(renderGate).toHaveAttribute(
+      "href",
+      `#${document.querySelector("script")?.id}`,
+    );
+  });
+
   it("hydrates onto the painted slip without a mismatch, then rolls from the live API", async () => {
     const slip = pickWith(0.5);
     const container = prerender();
