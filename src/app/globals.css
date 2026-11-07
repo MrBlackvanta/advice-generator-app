@@ -42,6 +42,30 @@
   --shadow-glow: 0 0 40px var(--color-accent);
 }
 
+@utility v-card {
+  @apply mb-8 flex w-full max-w-135 flex-col items-center rounded-card bg-card px-6 pt-10 text-center shadow-card sm:rounded-card-lg sm:px-12 sm:pt-12;
+}
+
+@utility v-card-text {
+  @apply mb-6 grid gap-6 sm:mb-10;
+}
+
+@utility v-card-heading {
+  @apply ps-(--tracking-label) text-label text-accent uppercase sm:text-label-lg;
+}
+
+@utility v-card-body {
+  @apply text-quote sm:text-quote-lg;
+}
+
+@utility v-card-action {
+  @apply relative mt-8 -mb-8 grid h-16 place-items-center rounded-full bg-accent text-page before:absolute before:inset-0 before:rounded-full before:opacity-0 before:shadow-glow before:transition-opacity before:duration-200 before:ease-out hover:before:opacity-100 focus-visible:before:opacity-100 sm:mt-10;
+}
+
+@utility v-card-action-label {
+  @apply ps-[calc(2rem+var(--tracking-label))] pe-8 text-label uppercase sm:text-label-lg;
+}
+
 @layer base {
   html {
     @apply overflow-y-scroll;

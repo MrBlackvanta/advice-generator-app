@@ -1,4 +1,4 @@
-export default function AdviceDivider() {
+export default function CardDivider() {
   return (
     <div aria-hidden="true" className="flex w-full items-center gap-4">
       <span className="h-px grow bg-divider" />
